@@ -4,7 +4,7 @@ import TituloComImagem from './TituloComImagem'
 import TituloSemImagem from './TituloSemImagem'
 
 export default function Header(
-    {titulo, descricao, className ='', imagem}
+    {titulo, descricao, className ='', imagem, children}
 ) {
   return (
     <header className={styles.header}>
@@ -13,7 +13,7 @@ export default function Header(
           <TituloSemImagem
             titulo={titulo}
             descricao={descricao}
-          />
+          >{children}</TituloSemImagem>
         }
         {
           titulo && imagem &&
@@ -22,7 +22,7 @@ export default function Header(
             descricao={descricao}
             imagem={imagem}
             className={className}
-          />
+          >{children}</TituloComImagem>
         }
     </header>
   )

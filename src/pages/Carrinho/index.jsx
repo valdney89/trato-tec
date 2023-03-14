@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import Header from 'components/Header';
 import Item from 'components/Item';
 import React from 'react'
@@ -53,10 +54,11 @@ export default function Carrinho() {
                     Subtotal: <strong> R$ {total.toFixed(2)} </strong>
                     </span>
                 </div>
-                <button
-                    className={styles.finalizar}
+                <Button
                     onClick={() => dispatch(resetarCarrinho())}
-                >Finalizar Compra</button>
+                >
+                    Finalizar Compra
+                </Button>
             </div>
         </div>
     )
